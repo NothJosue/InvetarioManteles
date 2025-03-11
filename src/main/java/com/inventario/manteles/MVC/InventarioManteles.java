@@ -1,6 +1,6 @@
 package com.inventario.manteles.MVC;
 
-import com.inventario.manteles.view.Login;
+import com.inventario.manteles.view.View;
 
 
 /**
@@ -10,7 +10,7 @@ import com.inventario.manteles.view.Login;
 public class InventarioManteles {
 
     public static void main(String[] args) {
-        Login L = new Login();
+        View L = new View();
         
         L.setVisible(true);
     }

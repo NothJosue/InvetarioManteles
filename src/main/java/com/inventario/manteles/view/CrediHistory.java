@@ -8,12 +8,12 @@ package com.inventario.manteles.view;
  *
  * @author User
  */
-public class View extends javax.swing.JFrame {
+public class CrediHistory extends javax.swing.JFrame {
 
     /**
      * Creates new form Main
      */
-    public View() {
+    public CrediHistory() {
         initComponents();
     }
 
@@ -28,11 +28,13 @@ public class View extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        Titulo1 = new javax.swing.JLabel();
         Titulo2 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        Titulo1 = new javax.swing.JLabel();
+        Titulo4 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         Titulo3 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
@@ -47,24 +49,20 @@ public class View extends javax.swing.JFrame {
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(97, 132, 97), 0, true));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Titulo1.setFont(new java.awt.Font("OCR A Extended", 1, 24)); // NOI18N
-        Titulo1.setText("S.I.M");
-        jPanel2.add(Titulo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 10, 120, 35));
-
         Titulo2.setFont(new java.awt.Font("OCR A Extended", 1, 24)); // NOI18N
-        Titulo2.setText("Ver");
-        jPanel2.add(Titulo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 10, -1, 41));
+        Titulo2.setText("Historial Crediticio");
+        jPanel2.add(Titulo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 0, -1, 41));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "# SILLAS", "UNIDADES", "FORMA", "COLOR", "AL CONTADO", "CREDITO"
+                "# SILLAS", "UNIDADES", "FORMA", "COLOR", "VENTAS", ""
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Short.class, java.lang.Short.class, java.lang.String.class, java.lang.String.class, java.lang.Float.class, java.lang.Float.class
+                java.lang.Short.class, java.lang.Short.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Boolean.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -73,22 +71,47 @@ public class View extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable1);
 
+        Titulo1.setFont(new java.awt.Font("OCR A Extended", 1, 24)); // NOI18N
+        Titulo1.setText("Total:");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 860, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(Titulo1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 2, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 349, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Titulo1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 14, Short.MAX_VALUE))
         );
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 860, 410));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 940, 480));
+        Titulo4.setFont(new java.awt.Font("OCR A Extended", 1, 24)); // NOI18N
+        Titulo4.setText("S.I.M");
+        jPanel2.add(Titulo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 30, 120, 35));
+
+        jButton1.setBackground(new java.awt.Color(255, 246, 216));
+        jButton1.setFont(new java.awt.Font("OCR A Extended", 1, 24)); // NOI18N
+        jButton1.setText("Sing In");
+        jButton1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 1, 1, 0, new java.awt.Color(0, 0, 0)));
+        jButton1.setOpaque(true);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 430, 271, 34));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, 940, 490));
 
         Titulo3.setFont(new java.awt.Font("OCR A Extended", 1, 24)); // NOI18N
         Titulo3.setText("USUARIO 1");
@@ -152,6 +175,10 @@ public class View extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -169,21 +196,23 @@ public class View extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CrediHistory.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CrediHistory.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CrediHistory.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CrediHistory.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new View().setVisible(true);
+                new CrediHistory().setVisible(true);
             }
         });
     }
@@ -192,6 +221,8 @@ public class View extends javax.swing.JFrame {
     private javax.swing.JLabel Titulo1;
     private javax.swing.JLabel Titulo2;
     private javax.swing.JLabel Titulo3;
+    private javax.swing.JLabel Titulo4;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;

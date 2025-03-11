@@ -8,12 +8,12 @@ package com.inventario.manteles.view;
  *
  * @author User
  */
-public class View extends javax.swing.JFrame {
+public class Modifity extends javax.swing.JFrame {
 
     /**
      * Creates new form Main
      */
-    public View() {
+    public Modifity() {
         initComponents();
     }
 
@@ -33,6 +33,7 @@ public class View extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         Titulo3 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
@@ -49,22 +50,22 @@ public class View extends javax.swing.JFrame {
 
         Titulo1.setFont(new java.awt.Font("OCR A Extended", 1, 24)); // NOI18N
         Titulo1.setText("S.I.M");
-        jPanel2.add(Titulo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 10, 120, 35));
+        jPanel2.add(Titulo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 10, 120, 35));
 
         Titulo2.setFont(new java.awt.Font("OCR A Extended", 1, 24)); // NOI18N
-        Titulo2.setText("Ver");
-        jPanel2.add(Titulo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 10, -1, 41));
+        Titulo2.setText("Modificar");
+        jPanel2.add(Titulo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, -1, 41));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "# SILLAS", "UNIDADES", "FORMA", "COLOR", "AL CONTADO", "CREDITO"
+                "", "", "# SILLAS", "UNIDADES", "FORMA", "COLOR", "AL CONTADO", "CREDITO", ""
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Short.class, java.lang.Short.class, java.lang.String.class, java.lang.String.class, java.lang.Float.class, java.lang.Float.class
+                java.lang.Object.class, java.lang.Object.class, java.lang.Short.class, java.lang.Short.class, java.lang.String.class, java.lang.String.class, java.lang.Float.class, java.lang.Object.class, java.lang.Object.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -87,6 +88,18 @@ public class View extends javax.swing.JFrame {
         );
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 860, 410));
+
+        jButton1.setBackground(new java.awt.Color(255, 246, 216));
+        jButton1.setFont(new java.awt.Font("OCR A Extended", 1, 24)); // NOI18N
+        jButton1.setText("Crear Categoria");
+        jButton1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 1, 1, 0, new java.awt.Color(0, 0, 0)));
+        jButton1.setOpaque(true);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 271, 34));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 940, 480));
 
@@ -152,6 +165,10 @@ public class View extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -169,21 +186,23 @@ public class View extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Modifity.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Modifity.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Modifity.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Modifity.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new View().setVisible(true);
+                new Modifity().setVisible(true);
             }
         });
     }
@@ -192,6 +211,7 @@ public class View extends javax.swing.JFrame {
     private javax.swing.JLabel Titulo1;
     private javax.swing.JLabel Titulo2;
     private javax.swing.JLabel Titulo3;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
