@@ -1,5 +1,6 @@
+
 package com.inventario.manteles.controller;
 
-public class controller {
+public class TableclothController {
     
 }

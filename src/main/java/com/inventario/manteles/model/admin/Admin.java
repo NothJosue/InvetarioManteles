@@ -1,18 +1,19 @@
+package com.inventario.manteles.model.admin;
 
-package com.inventario.manteles.model;
+public class Admin {
 
-public class User {
     private String username;
     private String password;
     private int numeroIntentos = 3;
 
-    public User(){}
-    
-    public User(String username, String password){
+    public Admin() {
+    }
+
+    public Admin(String username, String password) {
         this.username = username;
         this.password = password;
     }
-    
+
     public void intentosFallidos() {
         if (numeroIntentos > 0) {
             numeroIntentos--;
@@ -21,14 +22,15 @@ public class User {
             System.out.println("Cuenta bloqueada. Demasiados intentos fallidos.");
         }
     }
-    
-    protected boolean validarIngreso(String username, String password){
-       return this.username.equals("admin") && this.password.equals("12345");
+
+    public boolean validarIngreso(String username, String password) {
+        return this.username.equals("josue") && this.password.equals("1234");
     }
+
     public int getNumeroIntentos() {
         return numeroIntentos;
     }
-    
+
     public String getUsername() {
         return username;
     }
@@ -44,5 +46,5 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
-    
+
 }

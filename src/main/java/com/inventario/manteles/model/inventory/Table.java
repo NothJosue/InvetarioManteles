@@ -1,14 +1,15 @@
 
-package com.inventario.manteles.model;
+package com.inventario.manteles.model.inventory;
 
+import com.inventario.manteles.model.Tablecloth;
 import java.util.List;
 
-public class Mesa extends Mantel {
+public class Table extends Tablecloth {
     private String forma;
     private boolean isCredito;
     private int numeroSillas;        
 
-    public Mesa(List<String> color, float tamanio, float precio, int cantidad, String forma, boolean isCredito, int numeroSillas) {
+    public Table(List<String> color, float tamanio, float precio, int cantidad, String forma, boolean isCredito, int numeroSillas) {
         super(color, tamanio, precio, cantidad);
         this.forma = forma;
         this.isCredito = isCredito;

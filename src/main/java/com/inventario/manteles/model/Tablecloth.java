@@ -4,13 +4,13 @@ package com.inventario.manteles.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Mantel {
+public abstract class Tablecloth {
     protected List<String> color;
     protected float tamanio;
     protected float precio;
     protected int cantidad;
 
-    public Mantel(List<String> color, float tamanio, float precio, int cantidad) {
+    public Tablecloth(List<String> color, float tamanio, float precio, int cantidad) {
         this.color = color;
         this.tamanio = tamanio;
         this.precio = precio;
