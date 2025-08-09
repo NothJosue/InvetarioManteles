@@ -2,7 +2,6 @@ package com.inventario.manteles.igu;
 
 import com.inventario.manteles.modelo.Cliente;
 import com.inventario.manteles.modelo.Controladora;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 import javax.swing.JOptionPane;

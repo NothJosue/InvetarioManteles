@@ -11,6 +11,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 @Table(name = "compras")
@@ -36,6 +38,7 @@ public class Compra implements Serializable {
     private float precioUnitario;
     
     @Column(name = "fecha_compra")
+    @Temporal(TemporalType.DATE)
     private Date fecha_compra;
     
     @Column(name = "total")

@@ -2,6 +2,7 @@ package com.inventario.manteles.persistencia;
 
 import com.inventario.manteles.igu.IniciarSesion;
 import com.inventario.manteles.modelo.Cliente;
+import com.inventario.manteles.modelo.Compra;
 import com.inventario.manteles.modelo.MesaACrochet;
 import com.inventario.manteles.modelo.Rol;
 import com.inventario.manteles.modelo.Usuario;
@@ -167,5 +168,13 @@ public class ControladoraPersistencia {
         } catch (Exception ex) {
             Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+
+    public List<Compra> traerCompras() {
+        return compraJPA.findCompraEntities();
+    }
+
+    public void guardarCompra(Compra compra) {
+        compraJPA.create(compra);
     }
 }

@@ -110,7 +110,7 @@ public class GestionarClientes extends javax.swing.JInternalFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 102, 102));
-        jLabel1.setText("GESTIÓN DE USUARIOS");
+        jLabel1.setText("GESTIÓN DE CLIENTES");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 20, 270, -1));
 
         jLabel14.setForeground(new java.awt.Color(51, 51, 255));

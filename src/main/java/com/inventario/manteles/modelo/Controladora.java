@@ -92,4 +92,12 @@ public class Controladora {
         controlPersis.actualizarCliente(clienteCaptado);
     }
 
+    public List<Compra> traerCompras() {
+        return controlPersis.traerCompras();
+    }
+
+    public void guardarCompra(Compra compra) {
+        controlPersis.guardarCompra(compra);
+    }
+
 }

@@ -243,7 +243,9 @@ public class PanelAdministrativo extends javax.swing.JFrame {
     }//GEN-LAST:event_subMenuGestionarClientesActionPerformed
 
     private void subMenuAsignarProductoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subMenuAsignarProductoUsuarioActionPerformed
-        // TODO add your handling code here:
+       AsignarProductoUsuario pantallaAsignar = new AsignarProductoUsuario();
+       panelEscritorio.add(pantallaAsignar);
+       pantallaAsignar.setVisible(true);
     }//GEN-LAST:event_subMenuAsignarProductoUsuarioActionPerformed
 
     private void subMenuReportesMantelesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subMenuReportesMantelesActionPerformed
@@ -263,7 +265,7 @@ public class PanelAdministrativo extends javax.swing.JFrame {
     private javax.swing.JMenu menuManteles;
     private javax.swing.JMenu menuReportes;
     private javax.swing.JMenu menuUsuario;
-    private javax.swing.JDesktopPane panelEscritorio;
+    public static javax.swing.JDesktopPane panelEscritorio;
     private javax.swing.JMenuItem subMenuAsignarProductoUsuario;
     private javax.swing.JMenuItem subMenuCerrarSesion;
     private javax.swing.JMenuItem subMenuGestionarClientes;

@@ -206,15 +206,16 @@ public class GestionarManteles extends javax.swing.JInternalFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(cmbForma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(cmbCantidadSillas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(cmbColor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel7)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(cmbCantidadSillas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(jLabel7))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel5)
+                        .addComponent(cmbForma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
@@ -282,32 +283,6 @@ public class GestionarManteles extends javax.swing.JInternalFrame {
         cargarTabla();
     }//GEN-LAST:event_formInternalFrameOpened
 
-    private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
-        if (mantelMesaCaptado != null) {
-            control.eliminarMantelMesa(mantelMesaCaptado.getId());
-            JOptionPane.showMessageDialog(null, "Mantel eliminado exitosamente", "Mantel Eliminado", JOptionPane.INFORMATION_MESSAGE);
-            limpiar();
-            cargarTabla();
-        } else {
-            JOptionPane.showMessageDialog(null, "El mantel no se pudo eliminar", "Mantel NO Eliminado", JOptionPane.ERROR_MESSAGE);
-        }
-    }//GEN-LAST:event_btnEliminarActionPerformed
-    private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
-        mantelMesaCaptado.setTamanio(Float.parseFloat(txtTamanio.getText()));
-        mantelMesaCaptado.setPrecio(Float.parseFloat(txtPrecio.getText()));
-        mantelMesaCaptado.setCantidad(Integer.parseInt(txtCantidad.getText()));
-        mantelMesaCaptado.setForma(String.valueOf(cmbForma.getSelectedItem()));
-        mantelMesaCaptado.setColor(String.valueOf(cmbColor.getSelectedItem()));
-        mantelMesaCaptado.setNumeroSillas(Integer.parseInt(String.valueOf(cmbCantidadSillas.getSelectedItem())));
-
-
-        control.actualizarMantelMesa(mantelMesaCaptado);
-        
-        JOptionPane.showMessageDialog(null, "Mantel de mesa actualizado correctamente", "Mantel Actualizado", JOptionPane.INFORMATION_MESSAGE);
-
-        cargarTabla();
-    }//GEN-LAST:event_btnActualizarActionPerformed
-
     private void tblMantelesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblMantelesMouseClicked
 
     }//GEN-LAST:event_tblMantelesMouseClicked
@@ -330,25 +305,51 @@ public class GestionarManteles extends javax.swing.JInternalFrame {
         this.mantelMesaCaptado = mantelMesaEncontrado;
     }//GEN-LAST:event_tblMantelesMousePressed
 
-    private void cmbFormaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbFormaActionPerformed
+    private void txtCantidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCantidadActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cmbFormaActionPerformed
-
-    private void cmbCantidadSillasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbCantidadSillasActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cmbCantidadSillasActionPerformed
-
-    private void txtTamanioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTamanioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtTamanioActionPerformed
+    }//GEN-LAST:event_txtCantidadActionPerformed
 
     private void txtPrecioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPrecioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPrecioActionPerformed
 
-    private void txtCantidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCantidadActionPerformed
+    private void txtTamanioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTamanioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtCantidadActionPerformed
+    }//GEN-LAST:event_txtTamanioActionPerformed
+
+    private void cmbCantidadSillasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbCantidadSillasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbCantidadSillasActionPerformed
+
+    private void cmbFormaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbFormaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbFormaActionPerformed
+
+    private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
+        mantelMesaCaptado.setTamanio(Float.parseFloat(txtTamanio.getText()));
+        mantelMesaCaptado.setPrecio(Float.parseFloat(txtPrecio.getText()));
+        mantelMesaCaptado.setCantidad(Integer.parseInt(txtCantidad.getText()));
+        mantelMesaCaptado.setForma(String.valueOf(cmbForma.getSelectedItem()));
+        mantelMesaCaptado.setColor(String.valueOf(cmbColor.getSelectedItem()));
+        mantelMesaCaptado.setNumeroSillas(Integer.parseInt(String.valueOf(cmbCantidadSillas.getSelectedItem())));
+
+        control.actualizarMantelMesa(mantelMesaCaptado);
+
+        JOptionPane.showMessageDialog(null, "Mantel de mesa actualizado correctamente", "Mantel Actualizado", JOptionPane.INFORMATION_MESSAGE);
+
+        cargarTabla();
+    }//GEN-LAST:event_btnActualizarActionPerformed
+
+    private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
+        if (mantelMesaCaptado != null) {
+            control.eliminarMantelMesa(mantelMesaCaptado.getId());
+            JOptionPane.showMessageDialog(null, "Mantel eliminado exitosamente", "Mantel Eliminado", JOptionPane.INFORMATION_MESSAGE);
+            limpiar();
+            cargarTabla();
+        } else {
+            JOptionPane.showMessageDialog(null, "El mantel no se pudo eliminar", "Mantel NO Eliminado", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_btnEliminarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
