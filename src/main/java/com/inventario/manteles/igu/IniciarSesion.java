@@ -117,17 +117,16 @@ public class IniciarSesion extends javax.swing.JFrame {
         String nombre = loginText.getText();
         String contrasenia = String.valueOf(passwordText.getPassword());
 
+        Usuario usuarioBuscar = new Usuario(nombre, contrasenia);
         
-        var usuario = new Usuario("Josue", "1234");
-        if (usuario.validarIngreso()) {
+        if (control.validarIngresoUsuario(usuarioBuscar)) {
             JOptionPane.showMessageDialog(null, "Ingreso exitoso", "Iniciar sesion", JOptionPane.INFORMATION_MESSAGE);
             this.dispose();
             var pantalla = new PanelAdministrativo();
             pantalla.setVisible(true);
             pantalla.setLocationRelativeTo(null);
         } else {
-            JOptionPane.showMessageDialog(null, "Te equivocaste con el usuario o contraseña", " Inicio Fallido", JOptionPane.ERROR_MESSAGE);
-
+            JOptionPane.showMessageDialog(null, "Verificar el nombre o contraseña", " Inicio Fallido", JOptionPane.ERROR_MESSAGE);
         }
         loginText.setText("");
         passwordText.setText("");

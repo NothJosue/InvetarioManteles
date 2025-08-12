@@ -2,7 +2,6 @@ package com.inventario.manteles.modelo;
 
 import java.io.Serializable;
 import java.util.Objects;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -61,16 +60,6 @@ public class Usuario implements Serializable {
     // Constructor para eliminar
     public Usuario(Integer id) {
         this.id = id;
-    }
-
-
-    public boolean validarIngreso() {
-        if (this.nombre.equals("Josue") && this.contrasenia.equals("1234")) {
-            return true;
-
-        }else{
-            return false;
-        }
     }
 
     public Integer getId() {
@@ -143,7 +132,4 @@ public class Usuario implements Serializable {
     public String toString() {
         return "Usuario{" + "id=" + id + ", nombre=" + nombre + ", contrasenia=" + contrasenia + ", rol=" + rol + '}';
     }
-
-    
-
 }

@@ -36,6 +36,10 @@ public class Controladora {
         controlPersis.mostrarUsuarios();
     }
     
+    public boolean validarIngresoUsuario(Usuario usuarioBuscar){
+        return controlPersis.validarIngresoUsuario(usuarioBuscar);
+    }
+    
     public void crearMantelMesa(MesaACrochet mantelMesa){
         controlPersis.crearMantelMesa(mantelMesa);
     }

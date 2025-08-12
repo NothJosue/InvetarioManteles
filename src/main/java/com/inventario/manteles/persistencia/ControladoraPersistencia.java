@@ -142,12 +142,10 @@ public class ControladoraPersistencia {
 
     public Cliente buscarClienteNombresApellidos(Cliente clienteBuscado) {
         List<Cliente> clientes = traerClientes();
-        
-        for ( Cliente cliente : clientes ){
-            if (
-                    cliente.getNombres().equals(clienteBuscado.getNombres()) 
-                    && cliente.getApellidos().equals(clienteBuscado.getApellidos())
-               ) {
+
+        for (Cliente cliente : clientes) {
+            if (cliente.getNombres().equals(clienteBuscado.getNombres())
+                    && cliente.getApellidos().equals(clienteBuscado.getApellidos())) {
                 return cliente;
             }
         }
@@ -176,5 +174,18 @@ public class ControladoraPersistencia {
 
     public void guardarCompra(Compra compra) {
         compraJPA.create(compra);
+    }
+
+    public boolean validarIngresoUsuario(Usuario usuarioBuscar) {
+        boolean ingresoCorrecto = false;
+        Usuario comprobarUsuario = buscarUsuarioNombre(usuarioBuscar);
+        if (comprobarUsuario.getContrasenia() != null) {
+            if (comprobarUsuario.getContrasenia().equals(usuarioBuscar.getContrasenia())) {
+                return ingresoCorrecto = true;
+            }
+            return ingresoCorrecto;
+        } else {
+            return ingresoCorrecto;
+        }
     }
 }

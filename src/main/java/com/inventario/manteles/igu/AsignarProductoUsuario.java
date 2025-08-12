@@ -251,7 +251,6 @@ public class AsignarProductoUsuario extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_formInternalFrameOpened
 
     private void btnAsignarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAsignarActionPerformed
-        // Revisar la cantidad, validaciones tanto en cliente para aumentarle su deuda y controlar el stock de los manteles
         if ((mantelCaptado.getCantidad() >= Integer.parseInt(txtCantidad.getText())) && (Integer.parseInt(txtCantidad.getText()) > 0)) {
             Compra compra = new Compra(clienteCaptado, mantelCaptado, Integer.parseInt(txtCantidad.getText()), mantelCaptado.getPrecio(), dtFechaVenta.getDate());
             JOptionPane.showMessageDialog(null, "La asignación de la compra es correcta", "Exito en la compra", JOptionPane.INFORMATION_MESSAGE);
