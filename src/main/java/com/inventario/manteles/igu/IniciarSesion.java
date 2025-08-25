@@ -40,7 +40,7 @@ public class IniciarSesion extends javax.swing.JFrame {
 
         Titulo2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         Titulo2.setForeground(new java.awt.Color(0, 102, 102));
-        Titulo2.setText("INICIAR SECIÓN");
+        Titulo2.setText("INICIAR SESIÓN");
         jPanel2.add(Titulo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 280, 41));
 
         btnSession.setBackground(new java.awt.Color(0, 102, 102));
